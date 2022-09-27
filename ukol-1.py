@@ -17,5 +17,9 @@ if baliky [cislo_baliku]==True:
 else:
         print ("Balík zatím nebyl předán kurýrovi")
 
+
+
+        
+
        
 
