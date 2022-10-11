@@ -493,13 +493,19 @@ staty = [
      'area': 390757.0}]
 
 
+seznam_regionu = set()
+for stat in staty:
+    dalsi_region = stat["region"]
+    if dalsi_region not in seznam_regionu:
+        seznam_regionu.add(dalsi_region)
+
+
+print(seznam_regionu)
 
 uzivatel_region = input ("Zdejte region, který vás zajímá: ")
-
-for stat in staty:
-    if uzivatel_region == stat["region"]:
-        print(stat["name"])
-   
-if uzivatel_region not in stat["region"]:
-    print ("Neznámý region")   
-   
+if uzivatel_region in seznam_regionu:
+    for stat in staty:
+        if uzivatel_region in stat["region"]:
+            print(stat["name"])
+else:
+    print ("Neznámý region")
