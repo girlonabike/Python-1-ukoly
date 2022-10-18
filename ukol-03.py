@@ -14,6 +14,7 @@ def overeni_delky (cislo):
         return ("False")
     
 if overeni_delky(cislo) == "False":
+    print ("Chybné číslo!")
     exit()
     
 zprava = input ("Zadejte zprávu: ")
